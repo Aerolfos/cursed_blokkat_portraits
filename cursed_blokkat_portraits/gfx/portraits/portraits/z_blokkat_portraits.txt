@@ -1,0 +1,351 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+
+	oldblokkat = {
+		texturefile = "gfx/models/portraits/blokkat/oldblokkat.dds"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "mammalian_01_greetings"
+	}
+	oldblokkat1 = {
+		texturefile = "gfx/models/portraits/blokkat/oldblokkat1.dds"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "mammalian_01_greetings"
+	}
+	oldblokkat2 = {
+		texturefile = "gfx/models/portraits/blokkat/oldblokkat2.dds"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "mammalian_01_greetings"
+	}
+	oldblokkat3 = {
+		texturefile = "gfx/models/portraits/blokkat/oldblokkat3.dds"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "mammalian_01_greetings"
+	}
+	oldblokkat4 = {
+		texturefile = "gfx/models/portraits/blokkat/oldblokkat4.dds"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "mammalian_01_greetings"
+	}
+	oldblokkat5 = {
+		texturefile = "gfx/models/portraits/blokkat/oldblokkat5.dds"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "mammalian_01_greetings"
+	}
+	oldblokkatpride = {
+		texturefile = "gfx/models/portraits/blokkat/oldblokkatpride.dds"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "mammalian_01_greetings"
+	}
+	oldblokkatadmiral = {
+		texturefile = "gfx/models/portraits/blokkat/oldblokkatadmiral.dds"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "mammalian_01_greetings"
+	}
+	oldblokkat = {
+		texturefile = "gfx/models/portraits/blokkat/oldblokkat.dds"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "mammalian_01_greetings"
+	}
+	newoldblokkat1 = {
+		texturefile = "gfx/models/portraits/blokkat/newoldblokkat1.dds"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "mammalian_01_greetings"
+	}
+	newoldblokkat2 = {
+		texturefile = "gfx/models/portraits/blokkat/newoldblokkat2.dds"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "mammalian_01_greetings"
+	}
+	newoldblokkat3 = {
+		texturefile = "gfx/models/portraits/blokkat/newoldblokkat3.dds"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "mammalian_01_greetings"
+	}
+	newoldblokkat4 = {
+		texturefile = "gfx/models/portraits/blokkat/newoldblokkat4.dds"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "mammalian_01_greetings"
+	}
+	newoldblokkat5 = {
+		texturefile = "gfx/models/portraits/blokkat/newoldblokkat5.dds"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "mammalian_01_greetings"
+	}
+	newoldblokkatadmiral = {
+		texturefile = "gfx/models/portraits/blokkat/newoldblokkatadmiral.dds"
+		clothes_selector = "no_texture"
+		attachment_selector = "no_texture"
+		greeting_sound = "mammalian_01_greetings"
+	}
+
+}
+
+portrait_groups = {
+	oldblokkat = {
+		default = oldblokkat
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = indeterminable }
+				}
+				portraits = {
+					oldblokkat #We put "diymbase" because thats the name of the actual diym image
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					oldblokkat
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					oldblokkat
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = indeterminable
+				}
+				portraits = {
+					oldblokkat
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = indeterminable
+				}
+				portraits = {
+					oldblokkat
+				}
+			}
+		}
+	}
+	diverseoldblokkat = { #This is the "diym" portrait. Below defines where the portrait is used, so we just put diym everywhere as it doesnt matter because there wont be diym pops (sadly)
+		default = oldblokkat
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = indeterminable }
+				}
+				portraits = {
+					oldblokkat #We put "diymbase" because thats the name of the actual diym image
+					oldblokkat1
+					oldblokkat2
+					oldblokkat3
+					oldblokkat4
+					oldblokkat5
+					oldblokkatpride
+					newoldblokkat1
+					newoldblokkat2
+					newoldblokkat3
+					newoldblokkat4
+					newoldblokkat5
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					oldblokkat
+					oldblokkat1
+					oldblokkat2
+					oldblokkat3
+					oldblokkat4
+					oldblokkat5
+					oldblokkatpride
+					newoldblokkat1
+					newoldblokkat2
+					newoldblokkat3
+					newoldblokkat4
+					newoldblokkat5
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					oldblokkat
+					oldblokkat1
+					oldblokkat2
+					oldblokkat3
+					oldblokkat4
+					oldblokkat5
+					oldblokkatpride
+					newoldblokkat1
+					newoldblokkat2
+					newoldblokkat3
+					newoldblokkat4
+					newoldblokkat5
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = indeterminable
+				}
+				portraits = {
+					oldblokkat
+					oldblokkat1
+					oldblokkat2
+					oldblokkat3
+					oldblokkat4
+					oldblokkat5
+					oldblokkatpride
+					newoldblokkat1
+					newoldblokkat2
+					newoldblokkat3
+					newoldblokkat4
+					newoldblokkat5
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = indeterminable
+				}
+				portraits = {
+					oldblokkat
+					oldblokkat1
+					oldblokkat2
+					oldblokkat3
+					oldblokkat4
+					oldblokkat5
+					oldblokkatpride
+					newoldblokkat1
+					newoldblokkat2
+					newoldblokkat3
+					newoldblokkat4
+					newoldblokkat5
+				}
+			}
+		}
+	}
+	admiraloldblokkat = {
+		default = oldblokkatadmiral
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = indeterminable }
+				}
+				portraits = {
+					oldblokkatadmiral
+					newoldblokkatadmiral
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					oldblokkatadmiral
+					newoldblokkatadmiral
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					oldblokkatadmiral
+					newoldblokkatadmiral
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = indeterminable
+				}
+				portraits = {
+					oldblokkatadmiral
+					newoldblokkatadmiral
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = indeterminable
+				}
+				portraits = {
+					oldblokkatadmiral
+					newoldblokkatadmiral
+				}
+			}
+		}
+	}
+
+}

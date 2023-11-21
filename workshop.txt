@@ -1,5 +1,5 @@
 If you thought the vintage portraits were not cursed enough already, this mod is for you!
 
-Thanks to Elo for supplying the Blokkat image used.
+Replaces the vintage selection of blokkat portraits with different art. Thanks to Elowiny for supplying the Blokkat images used.
 
 Works with 3.9, and probably beyond, as long as Gigastructures keeps the same file structure for portraits.
